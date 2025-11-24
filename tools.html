@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Outils — Marseille Simulation</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="page-tools">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img src="Images/logomsBlanc.png" alt="Marseille Simulation" class="logo">
+        <div class="brand-text">
+          <span class="brand-title">Marseille Simulation</span>
+          <span class="brand-subtitle">Portail membre</span>
+        </div>
+      </a>
+      <nav class="main-nav" aria-label="Navigation principale">
+        <ul class="nav-list">
+          <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link" href="tools.html">Outils</a></li>
+          <li class="nav-item">
+            <button class="nav-button" aria-haspopup="true" aria-expanded="false">
+              <span class="nav-link">Explorateur</span>
+              <span class="nav-caret">▾</span>
+            </button>
+            <div class="dropdown-menu" role="menu">
+              <a class="dropdown-item" role="menuitem" href="explorer.html">Ressources</a>
+              <a class="dropdown-item" role="menuitem" href="https://alexismcn.github.io/Site-r-glements-MS/index.html" target="_blank" rel="noopener">Règlements</a>
+              <a class="dropdown-item" role="menuitem" href="#">Annuaire</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Annuaire des outils</h1>
+    <section class="controls">
+      <input id="search" type="search" placeholder="Rechercher un outil, une spécialité...">
+      <select id="filter-part">
+        <option value="">Tous les pôles</option>
+        <option value="Administrative">Partie Administrative</option>
+        <option value="Operationnelle">Partie Opérationnelle</option>
+      </select>
+      <select id="filter-specialty">
+        <option value="">Toutes les spécialités</option>
+      </select>
+    </section>
+
+    <section class="table-wrap">
+      <table id="tools-table" class="tools-table">
+        <thead>
+          <tr>
+            <th>Logo</th>
+            <th>Nom</th>
+            <th>Spécialité</th>
+            <th>Description</th>
+            <th>Partie</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <!-- Modal pour infos outils -->
+    <div id="tool-modal" class="modal" aria-hidden="true">
+      <div class="modal-overlay" data-close></div>
+      <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <button class="modal-close" data-close aria-label="Fermer">×</button>
+        <div class="modal-body">
+          <div class="modal-header">
+            <img id="modal-logo" src="" alt="logo" class="logo">
+            <div>
+              <h2 id="modal-title">Nom de l'outil</h2>
+              <p id="modal-specialty" class="muted">Spécialité</p>
+            </div>
+          </div>
+
+          <div class="modal-section">
+            <h4>Sensibilité</h4>
+            <p id="modal-sensitivity">-</p>
+          </div>
+
+          <div class="modal-section">
+            <h4>Accès</h4>
+            <p id="modal-access">-</p>
+          </div>
+
+          <div class="modal-section">
+            <h4>Description</h4>
+            <p id="modal-description">-</p>
+          </div>
+
+          <div class="modal-actions">
+            <a id="modal-link" class="btn primary" href="#" target="_blank" rel="noopener">Se connecter</a>
+            <button class="btn outline" data-close>Fermer</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="Images/logomsBlanc.png" alt="MS logo blanc" class="logo small">
+      </div>
+      <div class="footer-info">
+        <p>&copy; Marseille Simulation — Portail membre</p>
+      </div>
+      <div class="footer-contact">
+        <p>Contact: Alexis Mancini — DRH (Discord)</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

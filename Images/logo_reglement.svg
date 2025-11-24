@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200" role="img" aria-labelledby="titleDesc">
+  <title id="titleDesc">Logo Réglement</title>
+  <desc>Logo simple: cercle vert transparent avec la lettre R blanche.</desc>
+
+  <!-- Cercle vert sur fond transparent -->
+  <circle cx="100" cy="80" r="64" fill="#28A745" />
+
+  <!-- Lettre R blanche centrée -->
+  <text x="100" y="96" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="84" font-weight="700" fill="#ffffff">R</text>
+
+</svg>

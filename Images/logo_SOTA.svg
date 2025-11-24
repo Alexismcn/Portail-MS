@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="80" viewBox="0 0 240 80" role="img" aria-label="SOTA logo">
+  <title>SOTA</title>
+  <!-- Transparent background, simple gradient text -->
+  <defs>
+    <linearGradient id="gBlue" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#042743" />
+      <stop offset="100%" stop-color="#1e90ff" />
+    </linearGradient>
+  </defs>
+  <text x="20" y="50" font-family="Inter, Arial, sans-serif" font-size="40" font-weight="800" fill="url(#gBlue)">SOTA</text>
+  <text x="20" y="68" font-family="Inter, Arial, sans-serif" font-size="11" fill="#6b7280">Recrutement — Marseille Simulation</text>
+</svg>

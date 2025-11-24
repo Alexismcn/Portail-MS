@@ -1,0 +1,62 @@
+{
+  "tools": [
+    {
+      "name": "SOTA",
+      "logo": "Images/logo_SOTA.svg",
+      "specialty": "Recrutement",
+      "description": "Outil de recrutement de membres pour missions administratives et techniques.",
+      "part": "Administrative",
+      "sensitivity": "Non sensible",
+      "access": ["Tous"],
+      "link": "https://alexismcnn.github.io/MS-SOTA/",
+      "tags": ["recrutement"]
+    }
+    ,
+    {
+      "name": "Réglement",
+      "logo": "Images/logo_reglement.svg",
+      "specialty": "RH / Général",
+      "description": "Site des règlements et procédures internes.",
+      "part": "Administrative",
+      "sensitivity": "Non sensible",
+      "access": ["Tous"],
+      "link": "https://alexismcn.github.io/Site-r-glements-MS/index.html",
+      "tags": ["reglement","rh","procedures"]
+    }
+  ],
+  "tree": [
+    {
+      "title": "Partie Administrative",
+      "id": "administrative",
+      "children": [
+        {
+          "title": "RH",
+          "resources": [
+            {
+              "title": "Réglement",
+              "subtitle": "RH / Général",
+              "description": "Site des règlements et procédures internes.",
+              "link": "https://alexismcn.github.io/Site-r-glements-MS/index.html",
+              "tags": ["reglement","rh"]
+            }
+          ]
+        },
+        { "title": "DEV" },
+        { "title": "COM" },
+        { "title": "Direction" }
+      ]
+    },
+    {
+      "title": "Partie Opérationnelle",
+      "id": "operationnelle",
+      "children": [
+        { "title": "SP" },
+        { "title": "BMPM" },
+        { "title": "SAMU" },
+        { "title": "PN" },
+        { "title": "PM" },
+        { "title": "SC" }
+      ]
+    }
+  ]
+}

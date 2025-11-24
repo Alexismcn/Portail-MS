@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Explorateur — Marseille Simulation</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="page-explorer">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img src="Images/logomsBlanc.png" alt="Marseille Simulation" class="logo">
+        <div class="brand-text">
+          <span class="brand-title">Marseille Simulation</span>
+          <span class="brand-subtitle">Portail membre</span>
+        </div>
+      </a>
+      <nav class="main-nav" aria-label="Navigation principale">
+        <ul class="nav-list">
+          <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link" href="tools.html">Outils</a></li>
+          <li class="nav-item">
+            <button class="nav-button" aria-haspopup="true" aria-expanded="false">
+              <span class="nav-link">Explorateur</span>
+              <span class="nav-caret">▾</span>
+            </button>
+            <div class="dropdown-menu" role="menu">
+              <a class="dropdown-item" role="menuitem" href="explorer.html">Ressources</a>
+              <a class="dropdown-item" role="menuitem" href="#">Règlements</a>
+              <a class="dropdown-item" role="menuitem" href="#">Annuaire</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container explorer">
+    <aside class="tree">
+      <div class="tree-header">
+        <h2>Explorateur</h2>
+        <input id="explorer-search" type="search" placeholder="Rechercher une section...">
+      </div>
+      <nav class="breadcrumb" id="breadcrumb" aria-label="Fil d'Ariane"></nav>
+      <div id="tree-root" class="tree-root" role="tree"></div>
+    </aside>
+
+    <section class="content">
+      <div class="content-header">
+        <h3 id="content-title">Ressources</h3>
+        <button id="clear-selection" class="btn outline">Réinitialiser</button>
+      </div>
+      <div id="cards" class="cards-grid">
+        <p class="muted">Sélectionnez une section dans l'explorateur pour afficher les cartes de ressources.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="Images/logomsBlanc.png" alt="MS logo blanc" class="logo small">
+      </div>
+      <div class="footer-info">
+        <p>&copy; Marseille Simulation — Portail membre</p>
+      </div>
+      <div class="footer-contact">
+        <p>Contact: Alexis Mancini — DRH (Discord)</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

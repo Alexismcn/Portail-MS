@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Connexion — Portail Marseille Simulation</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* small overrides for the login card */
+    .login-wrap{min-height:70vh;display:flex;align-items:center;justify-content:center}
+    .login-card{background:#fff;padding:1.4rem;border-radius:8px;box-shadow:0 8px 24px rgba(2,6,23,0.08);width:360px}
+    .login-card h2{margin:0 0 .6rem}
+    .form-row{display:flex;flex-direction:column;gap:.4rem;margin-bottom:.8rem}
+    .form-row input{padding:.6rem;border:1px solid #e6eef6;border-radius:6px}
+    .error{color:var(--orange);font-size:.95rem;margin-top:.4rem}
+    .helper{font-size:.9rem;color:var(--muted);margin-top:.6rem}
+  </style>
+</head>
+<body>
+  <main class="container login-wrap">
+    <div class="login-card">
+      <div style="display:flex;align-items:center;gap:.6rem;margin-bottom:.6rem">
+        <img src="Images/logomsbleu.png" alt="Marseille Simulation" style="height:44px">
+        <div style="display:flex;flex-direction:column">
+          <strong style="color:var(--navy)">Marseille Simulation</strong>
+          <small class="muted" style="font-size:0.85rem">Portail membre</small>
+        </div>
+      </div>
+      <h2 style="margin-top:6px">Connexion</h2>
+      <form id="login-form">
+        <div class="form-row">
+          <label for="userid">Identifiant</label>
+          <input id="userid" name="userid" autocomplete="username" required>
+        </div>
+        <div class="form-row">
+          <label for="password">Mot de passe</label>
+          <input id="password" name="password" type="password" autocomplete="current-password" required>
+        </div>
+        <div style="display:flex;gap:.6rem;align-items:center;justify-content:space-between">
+          <button class="btn primary" type="submit">Se connecter</button>
+          <a href="index.html" class="btn outline">Retour</a>
+        </div>
+        <p id="error" class="error" role="status" aria-live="polite" style="display:none"></p>
+      </form>
+    </div>
+  </main>
+
+  <script>
+    // Credentials (as requested). WARNING: client-side only, not secure.
+    const AUTH_ID = 'MS2025P';
+    const AUTH_PW = 'MS2025P';
+
+    function getQueryParam(name){
+      const params = new URLSearchParams(location.search);
+      return params.get(name);
+    }
+
+    document.getElementById('login-form').addEventListener('submit', function(e){
+      e.preventDefault();
+      const id = document.getElementById('userid').value.trim();
+      const pw = document.getElementById('password').value;
+      const err = document.getElementById('error');
+      if(id === AUTH_ID && pw === AUTH_PW){
+        sessionStorage.setItem('ms_auth','true');
+        const next = getQueryParam('next') || 'index.html';
+        location.href = next;
+      } else {
+        err.style.display = 'block';
+        err.textContent = 'Identifiant ou mot de passe incorrect.';
+      }
+    });
+  </script>
+</body>
+</html>
